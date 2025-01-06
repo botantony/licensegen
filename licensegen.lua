@@ -3,7 +3,10 @@ local config = require("cfg") -- also defines I18n
 local text_utils = require("text_utils")
 local table_utils = require("table_utils")
 local file_utils = require("file_utils")
-local notes = require("i18n." .. config.locale .. "_notes")
+local notes = file_utils.isModuleAvailable("i18n." .. config.locale .. "_notes")
+		and require("i18n." .. config.locale .. "_notes")
+	or require("i18n.en_US_notes")
+local notes_en = require("i18n.en_US_notes")
 
 local licensesHashMap = { standard = {}, custom = {} }
 
@@ -76,7 +79,7 @@ for i = 1, #arg do
 				print(license)
 			end
 		end
-		print(I18n:msg("license-list-default-licenses"))
+		print(I18n:msg("license-list-standard-licenses"))
 		for license, _ in table_utils.spairs(config.licenses) do
 			io.stdout:write("	")
 			if licensesHashMap.custom[license:lower()] then
@@ -200,8 +203,8 @@ end
 outputFile:write(outputText)
 outputFile:close()
 
-if notes[config.licensename:lower()] then
-	print(I18n:msg("note-format", { note = notes[config.licensename:lower()] }))
+if notes_en[config.licensename:lower()] then
+	print(I18n:msg("note-format", { note = notes[config.licensename:lower()] or notes_en[config.licensename:lower()] }))
 	print("\n")
 end
 

@@ -15,8 +15,8 @@ end
 local function getLocale(customLocale)
 	local locale, _ = os.getenv("LANG"):match("([^.]*).*")
 	locale = customLocale or locale
-	local file = io.open("i18n" .. file_utils.slash .. locale .. ".lua", "r")
-	if file == nil then
+	local file = file_utils.isModuleAvailable("i18n." .. locale)
+	if not file then
 		locale = "en_US"
 	end
 	return locale

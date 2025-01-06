@@ -1,3 +1,9 @@
+![GitHub License](https://img.shields.io/github/license/botantony/licensegen)
+![LuaRocks](https://img.shields.io/luarocks/v/botantony/licensegen)
+![GitHub Tag](https://img.shields.io/github/v/tag/botantony/licensegen)
+
+[English (Default)](README.md) • [Русский](readme_i18n/ru.md)
+
 Small Lua-based utility that generates license file in your current directory.
 
 [![Licensegen demo](https://asciinema.org/a/05VjCIvSHRufPjatfqNhREZfT.svg)](https://asciinema.org/a/05VjCIvSHRufPjatfqNhREZfT)
