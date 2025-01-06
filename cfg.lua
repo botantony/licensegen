@@ -36,10 +36,26 @@ local function getLicenses(dir)
 	return files
 end
 
+local function standardLicensesPath()
+	local path = file_utils.getScriptDir() .. "licenses"
+	local err
+	if not file_utils.directoryExists(path) then
+		local datafile = require("datafile").path
+		path, err = datafile("licenses/bsd-4-clause.txt", "r")
+		if path then
+			path = path:match("(.*" .. file_utils.slash .. ")")
+		else
+			io.stderr:write("Error: " .. err)
+			path = nil
+		end
+	end
+	return path
+end
+
 config.cfg = getConfigPath()
 config.customLicensesDir = config.cfg .. file_utils.slash .. "licenses"
 config.customLicenses = getLicenses(config.customLicensesDir)
-config.licensesDir = file_utils.getScriptDir() .. "licenses"
+config.licensesDir = standardLicensesPath()
 config.licenses = getLicenses(config.licensesDir)
 config.workdir = os.getenv("PWD")
 config.aliases = {

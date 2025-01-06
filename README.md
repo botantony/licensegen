@@ -3,6 +3,10 @@ Small Lua-based utility that generates license file in your current directory.
 [![Licensegen demo](https://asciinema.org/a/05VjCIvSHRufPjatfqNhREZfT.svg)](https://asciinema.org/a/05VjCIvSHRufPjatfqNhREZfT)
 
 ## Installation
+### LuaRocks
+TBA
+
+### Manual
 1. Clone this project
 2. (optional) Add directory of this project to your `$PATH` variable
 3. Use `licensegen` or `lua licensegen.lua`
