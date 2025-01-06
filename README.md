@@ -4,7 +4,10 @@ Small Lua-based utility that generates license file in your current directory.
 
 ## Installation
 ### LuaRocks
-TBA
+Use the following command:
+```console
+sudo luarocks install licensegen
+```
 
 ### Manual
 1. Clone this project
