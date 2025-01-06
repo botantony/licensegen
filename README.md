@@ -1,6 +1,6 @@
 Small Lua-based utility that generates license file in your current directory.
 
-![Licensegen demo](resources/demo.gif)
+[![Licensegen demo](https://asciinema.org/a/05VjCIvSHRufPjatfqNhREZfT.svg)](https://asciinema.org/a/05VjCIvSHRufPjatfqNhREZfT)
 
 ## Installation
 1. Clone this project
