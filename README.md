@@ -1,6 +1,6 @@
 Small Lua-based utility that generates license file in your current directory.
 
-![Licensegen demo](resourses/demo.mp4)
+![Licensegen demo](resources/demo.mp4)
 
 ## Installation
 1. Clone this project
@@ -43,3 +43,6 @@ This config file sets `My Name` as default `$owner$` variable and `bsd` is now a
 
 ## Custom licenses
 While creating a custom license is [generally a bad idea](https://ben.balter.com/2016/08/01/why-you-shouldnt-write-your-own-open-source-license/), this project doesn't list all existing licenses that you might need to use. In this case you can create folder `licenses` in config directory and copy text of license template with `.txt` extension. Keep in mind that "custom" licenses have higher priority over the "standard" ones.
+
+## License source
+All licenses were taken from [choosealicense.com](https://github.com/github/choosealicense.com) repo.
