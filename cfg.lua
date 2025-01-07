@@ -59,7 +59,7 @@ config.licensesDir = standardLicensesPath()
 config.licenses = getLicenses(config.licensesDir)
 config.workdir = os.getenv("PWD")
 config.aliases = {
-	["alf"] = "alf-3.0",
+	["afl"] = "afl-3.0",
 	["apgl"] = "apgl-3.0",
 	["apache"] = "apache-2.0",
 	["artistic"] = "artistic-2.0",
@@ -94,18 +94,38 @@ if file_utils.fileExists(fullConfigPath) then
 		local output = {}
 		for k, v in pairs(t1) do
 			if type(k) ~= "string" then
-				io.stderr:write(I18n:msg("error-invalid-alias-key", { key = tostring(k), value = tostring(v) }))
+				I18n:printErrOrWarning(
+					false,
+					I18n:msg("error-invalid-alias-key", { key = tostring(k), value = tostring(v) })
+				)
+				io.stderr:write(I18n:msg("error-invalid-alias-string-type"))
+				io.stderr:write("\n")
 			elseif type(v) ~= "string" then
-				io.stderr:write(I18n:msg("error-invalid-alias-value", { key = tostring(k), value = tostring(v) }))
+				I18n:printErrOrWarning(
+					false,
+					I18n:msg("error-invalid-alias-value", { key = tostring(k), value = tostring(v) })
+				)
+				io.stderr:write(I18n:msg("error-invalid-alias-string-type"))
+				io.stderr:write("\n")
 			else
 				output[k] = v:lower()
 			end
 		end
 		for k, v in pairs(t2) do
 			if type(k) ~= "string" then
-				io.stderr:write(I18n:msg("error-invalid-alias-key", { key = tostring(k), value = tostring(v) }))
+				I18n:printErrOrWarning(
+					false,
+					I18n:msg("error-invalid-alias-key", { key = tostring(k), value = tostring(v) })
+				)
+				io.stderr:write(I18n:msg("error-invalid-alias-string-type"))
+				io.stderr:write("\n")
 			elseif type(v) ~= "string" then
-				io.stderr:write(I18n:msg("error-invalid-alias-value", { key = tostring(k), value = tostring(v) }))
+				I18n:printErrOrWarning(
+					false,
+					I18n:msg("error-invalid-alias-value", { key = tostring(k), value = tostring(v) })
+				)
+				io.stderr:write(I18n:msg("error-invalid-alias-string-type"))
+				io.stderr:write("\n")
 			else
 				output[k] = v:lower()
 			end
@@ -122,10 +142,13 @@ if file_utils.fileExists(fullConfigPath) then
 			elseif type(v) == "string" or type(v) == "number" then
 				config[k] = config[k] or v
 			else
-				io.stderr:write(I18n:msg("config-unsupported-value", { type = type(v), value = tostring(v) }))
+				I18n:printErrOrWarning(
+					false,
+					I18n:msg("config-unsupported-value", { type = type(v), value = tostring(v) })
+				)
 			end
 		else
-			io.stderr:write(I18n:msg("config-unsupported-key", { type = type(k), key = tostring(k) }))
+			I18n:printErrOrWarning(false, I18n:msg("config-unsupported-key", { type = type(k), key = tostring(k) }))
 		end
 	end
 else

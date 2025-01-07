@@ -12,22 +12,28 @@ local licensesHashMap = { standard = {}, custom = {} }
 
 for license, _ in pairs(config.customLicenses) do
 	if licensesHashMap.custom[license:lower()] then
-		io.stderr:write(I18n:msg("warning-overlapping-licenses", {
-			type = I18n:msg("license-type-custom"),
-			first = licensesHashMap.custom[license:lower()],
-			second = license,
-		}))
+		I18n:printErrOrWarning(
+			true,
+			I18n:msg("warning-overlapping-licenses", {
+				type = I18n:msg("license-type-custom"),
+				first = licensesHashMap.custom[license:lower()],
+				second = license,
+			})
+		)
 	end
 	licensesHashMap.custom[license:lower()] = license
 end
 
 for license, _ in pairs(config.licenses) do
 	if licensesHashMap.standard[license:lower()] then
-		io.stderr:write(I18n:msg("warning-overlapping-licenses", {
-			type = I18n:msg("license-type-standard"),
-			first = licensesHashMap.standard[license:lower()],
-			second = license,
-		}))
+		I18n:printErrOrWarning(
+			true,
+			I18n:msg("warning-overlapping-licenses", {
+				type = I18n:msg("license-type-standard"),
+				first = licensesHashMap.standard[license:lower()],
+				second = license,
+			})
+		)
 	end
 	licensesHashMap.standard[license:lower()] = true
 end
@@ -54,13 +60,13 @@ local configConstants = {
 -- process args
 for i = 1, #arg do
 	if arg[i] == "-h" or arg[i] == "--help" then
-		print(I18n:msg("cli-help"))
+		I18n:print("cli-help")
 		for k, _ in table_utils.spairs(configConstants) do
 			if k ~= "locale" and k ~= "aliases" then
 				print("	" .. k)
 			end
 		end
-		print(I18n:msg("cli-help-cfg-only"))
+		I18n:print("cli-help-cfg-only")
 		for k, _ in table_utils.spairs({ locale = 1, aliases = 1 }) do
 			if k ~= "locale" or k ~= "aliases" then
 				print("	" .. k)
@@ -69,12 +75,12 @@ for i = 1, #arg do
 		os.exit()
 	elseif arg[i] == "--list" or arg[i] == "--licenses" then
 		if table_utils.size(config.customLicenses) ~= 0 then
-			print(I18n:msg("license-list-custom-licenses"))
+			I18n:print("license-list-custom-licenses")
 		end
 		for license, _ in table_utils.spairs(config.customLicenses) do
 			io.stdout:write("	")
 			if licensesHashMap.standard[license:lower()] then
-				I18n:msg("license-list-overwrites", { license = license })
+				I18n:print("license-list-overwrites", { license = license })
 			else
 				print(license)
 			end
@@ -83,14 +89,14 @@ for i = 1, #arg do
 		for license, _ in table_utils.spairs(config.licenses) do
 			io.stdout:write("	")
 			if licensesHashMap.custom[license:lower()] then
-				I18n:msg("license-list-overwritten", { license = license })
+				I18n:print("license-list-overwritten", { license = license })
 			else
 				print(license)
 			end
 		end
 		os.exit()
 	elseif arg[i] == "--cfg" or arg[i] == "--config" then
-		print(I18n:msg("cli-config-directory", { dir = config.cfg, slash = file_utils.slash }))
+		I18n:print("cli-config-directory", { dir = config.cfg, slash = file_utils.slash })
 		os.exit()
 	elseif arg[i] == "-a" or arg[i] == "--aliases" then
 		print(I18n:msg("cli-aliases"))
@@ -129,7 +135,7 @@ for i = 1, #arg do
 					similarity[k] = text_utils.distance(k:lower(), arg_lower)
 				end
 			end
-			io.stderr:write(I18n:msg("error-unknown-license", { name = config.licensename }))
+			I18n:printErrOrWarning(false, I18n:msg("error-unknown-license", { name = config.licensename }))
 			local counter = 0
 			for name, _ in
 				table_utils.spairs(similarity, function(t, a, b)
@@ -148,14 +154,14 @@ for i = 1, #arg do
 end
 
 if not config.licensename then
-	io.stderr:write(I18n:msg("error-no-license-name"))
-	print(I18n:msg("cli-help"))
+	I18n:printErrOrWarning(false, I18n:msg("error-no-license-name"))
+	I18n:print("cli-help")
 	for k, _ in table_utils.spairs(configConstants) do
 		if k ~= "locale" and k ~= "aliases" then
 			print("	" .. k)
 		end
 	end
-	print(I18n:msg("cli-help-cfg-only"))
+	I18n:print("cli-help-cfg-only")
 	for k, _ in table_utils.spairs({ locale = 1, aliases = 1 }) do
 		if k ~= "locale" or k ~= "aliases" then
 			print("	" .. k)
@@ -170,7 +176,7 @@ filepath = filepath .. file_utils.slash .. config.licensename .. ".txt"
 local licenseFile = io.open(filepath, "r")
 
 if not licenseFile then
-	io.stderr:write(I18n:msg("error-open-file", { path = filepath }))
+	I18n:printErrOrWarning(false, I18n:msg("error-open-file", { path = filepath }))
 	os.exit(1)
 end
 
@@ -188,7 +194,7 @@ outputText = text_utils.replaceArgs(outputText, replace)
 
 if outputText:match("%$[^%s]+%$") then
 	for argument in string.gmatch(outputText, "%$[^%s]+%$") do
-		io.stderr:write(I18n:msg("warning-unfilled-argument", { arg = argument }))
+		I18n:printErrOrWarning(true, I18n:msg("warning-unfilled-argument", { arg = argument }))
 	end
 end
 
@@ -196,7 +202,7 @@ filepath = config.workdir .. file_utils.slash .. config.filename
 
 local outputFile = io.open(filepath, "w")
 if not outputFile then
-	io.stderr:write(I18n:msg("error-open-file", { path = filepath }))
+	I18n:printErrOrWarning(false, I18n:msg("error-open-file", { path = filepath }))
 	os.exit(1)
 end
 
@@ -204,8 +210,8 @@ outputFile:write(outputText)
 outputFile:close()
 
 if notes_en[config.licensename:lower()] then
-	print(I18n:msg("note-format", { note = notes[config.licensename:lower()] or notes_en[config.licensename:lower()] }))
+	I18n:print("note-format", { note = notes[config.licensename:lower()] or notes_en[config.licensename:lower()] })
 	print("\n")
 end
 
-print(I18n:msg("done"))
+I18n:print("done")

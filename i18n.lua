@@ -4,6 +4,7 @@ local l10ns = {}
 local en = "en_US"
 local replaceArgs = require("text_utils").replaceArgs
 local file_utils = require("file_utils")
+local colors = require("colors")
 
 local function setLang(locale)
 	local l10n = file_utils.isModuleAvailable("i18n." .. locale)
@@ -22,7 +23,23 @@ function _i18n:msg(key, args)
 		return "<" .. key .. ">"
 	end
 
+	args = args or {}
+
+	for k, v in pairs(colors) do
+		args[k] = v
+	end
+
 	return replaceArgs(output_msg, args or {})
+end
+
+function _i18n:print(key, args)
+	print(I18n:msg(key, args))
+end
+
+function _i18n:printErrOrWarning(warn, msg)
+	local template = warn and "warning" or "error"
+	io.stderr:write(I18n:msg(template .. "-template", { [template] = msg }))
+	io.stderr:write("\n")
 end
 
 function i18n.loadMsg(locale)

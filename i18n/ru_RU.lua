@@ -1,28 +1,16 @@
-local colors = require("i18n._color")
 return {
 	-- config errors
-	["config-unsupported-key"] = colors.red
-		.. "Ошибка"
-		.. colors.reset
-		.. ": ключ `$key$` использует неподдерживаемый тип данных $type$ (используйте число или строку)!\n",
-	["config-unsupported-value"] = colors.red
-		.. "Ошибка"
-		.. colors.reset
-		.. ": значение `$value$` использует неподдерживаемый тип данных $type$ (используйте число или строку)!\n",
+
+	["error-template"] = "$red$Ошибка$reset$: $error$",
+	["config-unsupported-key"] = "ключ `$key$` использует неподдерживаемый тип данных $type$ (используйте число или строку)!",
+	["config-unsupported-value"] = "значение `$value$` использует неподдерживаемый тип данных $type$ (используйте число или строку)!",
 	-- invalid aliases
-	["error-invalid-alias-key"] = colors.red
-		.. "Ошибка"
-		.. colors.reset
-		.. ": некорректный ключ псевдонима `$key$` со значением `$value$!\nКлюч и значение должны быть строками!\n",
-	["error-invalid-alias-value"] = colors.red
-		.. "Ошибка"
-		.. colors.reset
-		.. ": некорректное значение псевдонима `$value$` с ключом `$key$`!\nКлюч и значение должны быть строками!\n",
+	["error-invalid-alias-key"] = "некорректный ключ псевдонима `$key$` со значением `$value$!",
+	["error-invalid-alias-value"] = "некорректное значение псевдонима `$value$` с ключом `$key$`!",
+	["error-invalid-alias-string-type"] = "Ключ и значение должны быть строками!",
 	-- overlapping licenses
-	["warning-overlapping-licenses"] = colors.yellow
-		.. "Предупреждение"
-		.. colors.reset
-		.. ": так как названия лицензий не чувствительны к регистру, эти $type$ лицензии конфликтуют друг с другом: $first$ и $second",
+	["warning-template"] = "$yellow$Предупреждение$reset$: $warning$",
+	["warning-overlapping-licenses"] = "так как названия лицензий не чувствительны к регистру, эти $type$ лицензии конфликтуют друг с другом: $first$ и $second",
 	["license-type-custom"] = "пользовательские",
 	["license-type-standard"] = "стандартные",
 	-- license list
@@ -63,23 +51,12 @@ return {
 	["cli-config-directory"] = [==[Полный путь до директории с конфигурацией: $dir$$slash$
 Конфигурационный файл: $dir$$slash$config.lua
 Директория с пользовательскими лицензиями: $dir$$slash$licenses$slash$]==],
-	["error-unknown-license"] = colors.red
-		.. "Ошибка"
-		.. colors.reset
-		.. ": неизвестная лицензия `$name$`. Возможно вы искали другую лицензию с похожим названием:\n",
-	["error-no-license-name"] = colors.red
-		.. "Ошибка"
-		.. colors.reset
-		.. ": не было предоставлено название лицензии!\n",
-	["warning-unfilled-argument"] = colors.yellow
-		.. "Предупреждение"
-		.. colors.reset
-		.. ": аргумент `$arg$` не был заменён!\n",
-	["error-open-file"] = colors.red
-		.. "Во время открытия файла `$path$` произошла ошибка!\n"
-		.. colors.reset,
+	["error-unknown-license"] = "неизвестная лицензия `$name$`. Возможно вы искали другую лицензию с похожим названием:",
+	["error-no-license-name"] = "не было предоставлено название лицензии!",
+	["warning-unfilled-argument"] = "аргумент `$arg$` не был заменён!",
+	["error-open-file"] = "во время открытия файла `$path$` произошла ошибка!",
 	-- note formatting
-	["note-format"] = colors.blue .. "Примечание" .. colors.reset .. ": $note$",
+	["note-format"] = "$blue$Примечание$reset$: $note$",
 	-- done
-	["done"] = colors.green .. "ГОТОВО!" .. colors.reset,
+	["done"] = "$green$ГОТОВО!",
 }

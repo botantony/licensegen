@@ -1,28 +1,15 @@
-local colors = require("i18n._color")
 return {
 	-- config errors
-	["config-unsupported-key"] = colors.red
-		.. "Error"
-		.. colors.reset
-		.. ": key `$key$` uses unsupported type $type$ (use number or string)!\n",
-	["config-unsupported-value"] = colors.red
-		.. "Error"
-		.. colors.reset
-		.. ": value `$value$` uses unsupported type $type$ (use number or string)!\n",
+	["error-template"] = "$red$Error$reset$: $error$",
+	["config-unsupported-key"] = "key `$key$` uses unsupported type $type$ (use number or string)!",
+	["config-unsupported-value"] = "value `$value$` uses unsupported type $type$ (use number or string)!",
 	-- invalid aliases
-	["error-invalid-alias-key"] = colors.red
-		.. "Error"
-		.. colors.reset
-		.. ": invalid alias key `$key$` with value `$value$!\nKey and value must be strings!\n",
-	["error-invalid-alias-value"] = colors.red
-		.. "Error"
-		.. colors.reset
-		.. ": invalid alias value `$value$` with key `$key$`!\nKey and value must be strings!\n",
+	["error-invalid-alias-key"] = "invalid alias key `$key$` with value `$value$!",
+	["error-invalid-alias-value"] = "invalid alias value `$value$` with key `$key$`!",
+	["error-invalid-alias-string-type"] = "Key and value must be strings!",
 	-- overlapping licenses
-	["warning-overlapping-licenses"] = colors.yellow
-		.. "Warning"
-		.. colors.reset
-		.. ": because names of the licenses are case-insensitive, these $type$ licenses are overlapping: $first$ and $second",
+	["warning-template"] = "$yellow$Warning$reset$: $warning$",
+	["warning-overlapping-licenses"] = "because names of the licenses are case-insensitive, these $type$ licenses are overlapping: $first$ and $second",
 	["license-type-custom"] = "custom",
 	["license-type-standard"] = "standard",
 	-- license list
@@ -63,18 +50,12 @@ List of arguments that are reserved:]==],
 	["cli-config-directory"] = [==[Full path to the config directory: $dir$$slash$
 Config file: $dir$$slash$config.lua
 Directory with custom licenses: $dir$$slash$licenses$slash$]==],
-	["error-unknown-license"] = colors.red
-		.. "Error"
-		.. colors.reset
-		.. ": unknown license `$name$`. Maybe you were looking for a different license with similar name:\n",
-	["error-no-license-name"] = colors.red .. "Error" .. colors.reset .. ": no license name was provided!\n",
-	["warning-unfilled-argument"] = colors.yellow
-		.. "Warning"
-		.. colors.reset
-		.. ": argument `$arg$` was not replaced!\n",
-	["error-open-file"] = colors.red .. "An error occured during opening file `$path$`!\n" .. colors.reset,
+	["error-unknown-license"] = "unknown license `$name$`. Maybe you were looking for a different license with similar name:",
+	["error-no-license-name"] = "no license name was provided!",
+	["warning-unfilled-argument"] = "argument `$arg$` was not replaced!",
+	["error-open-file"] = "An error occured during opening file `$path$`!",
 	-- note formatting
-	["note-format"] = colors.blue .. "Note" .. colors.reset .. ": $note$",
+	["note-format"] = "$blue$Note$reset$: $note$",
 	-- done
-	["done"] = colors.green .. "DONE!" .. colors.reset,
+	["done"] = "$green$DONE!$reset$",
 }
