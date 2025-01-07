@@ -1,8 +1,8 @@
-![GitHub License](https://img.shields.io/github/license/botantony/licensegen)
-![LuaRocks](https://img.shields.io/luarocks/v/botantony/licensegen)
-![GitHub Tag](https://img.shields.io/github/v/tag/botantony/licensegen)
+[![GitHub License](https://img.shields.io/github/license/botantony/licensegen)](https://spdx.org/licenses/BSD-4-Clause.html)
+[![LuaRocks](https://img.shields.io/luarocks/v/botantony/licensegen)](https://luarocks.org/modules/botantony/licensegen)
+[![GitHub Tag](https://img.shields.io/github/v/tag/botantony/licensegen)](https://github.com/botantony/licensegen/tags)
 
-[English (Default)](README.md) • [Русский](readme_i18n/ru.md)
+[English (Default)](../README.md) • [Русский](ru.md)
 
 Небольшая утилита на Lua для генерации файлов лицензии в текущей директории.
 
