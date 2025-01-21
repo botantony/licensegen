@@ -27,7 +27,9 @@ licensegen <licensename> --<arg1>=<val1> --<arg2>=<val2> ...
 
 There are also some options that do not create license file but output useful information:
 - `-h` or `--help` - Show help page
+- `-v` or `--version` - Show version
 - `-a` or `--aliases` - Show aliases
+- `-i` or `--info` - Show detailed info about the license
 - `--list` or `--licenses` - List all licenses
 - `--cfg` or `--config` - Show config directory
 
