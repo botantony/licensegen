@@ -1,9 +1,9 @@
 rockspec_format = "3.0"
 package = "licensegen"
-version = "v1.1.1-1"
+version = "v1.2.0-1"
 source = {
 	url = "git+https://github.com/botantony/licensegen.git",
-	tag = "v1.1.1",
+	tag = "v1.2.0",
 }
 description = {
 	summary = "Tool for generating license files",
@@ -25,10 +25,9 @@ build = {
 		["licensegen.i18n"] = "i18n.lua",
 		["licensegen.colors"] = "colors.lua",
 		["licensegen.i18n.en_US"] = "i18n/en_US.lua",
-		["licensegen.i18n.en_US_notes"] = "i18n/en_US_notes.lua",
 		["licensegen.i18n.ru_RU"] = "i18n/ru_RU.lua",
-		["licensegen.i18n.ru_RU_notes"] = "i18n/ru_RU_notes.lua",
 		["licensegen.licensegen"] = "licensegen.lua",
+		["licensegen.metadata"] = "metadata.lua",
 		["licensegen.table_utils"] = "table_utils.lua",
 		["licensegen.text_utils"] = "text_utils.lua",
 	},

@@ -1,6 +1,5 @@
 return {
 	-- config errors
-
 	["error-template"] = "$red$Ошибка$reset$: $error$",
 	["config-unsupported-key"] = "ключ `$key$` использует неподдерживаемый тип данных $type$ (используйте число или строку)!",
 	["config-unsupported-value"] = "значение `$value$` использует неподдерживаемый тип данных $type$ (используйте число или строку)!",
@@ -27,7 +26,9 @@ return {
 ОПЦИИ:
 
 	-h,     --help        Показывает эту страницу с документацией
+	-v,     --version     Показывает текущую версию программы
 	-a,     --aliases     Показывает псевдонимы лицензий
+	-i,     --info        Показывает подробную информацию о выбранной лицензии
 	--list, --licenses    Показывает все лицензии
 	--cfg,  --config      Показывает путь до файла конфигурации
 
@@ -58,5 +59,25 @@ return {
 	-- note formatting
 	["note-format"] = "$blue$Примечание$reset$: $note$",
 	-- done
-	["done"] = "$green$ГОТОВО!",
+	["done"] = "$green$ГОТОВО!$reset$",
+	-- notes
+	["note-agpl-3.0"] = "Free Software Foundation рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти внизу этой лицензии.",
+	["note-apache-2.0"] = "Apache Software Foundation рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти внизу этой лицензии. Более подробную информацию можно прочитать здесь: https://apache.org/foundation/license-faq.html#Apply-My-Software",
+	["note-bsl-1.0"] = "Boost рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти на странице Boost Software License FAQ: https://www.boost.org/users/license.html#FAQ",
+	["note-cc0-1.0"] = "Creative Commons рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти на их сайте: https://wiki.creativecommons.org/wiki/CC0_FAQ#May_I_apply_CC0_to_computer_software.3F_If_so.2C_is_there_a_recommended_implementation.3F",
+	-- ["note-cern-ohl-p-2.0"] = "CERN recommends adding the following information in the source files: copyright and license notice, a disclaimer of warranties and a source location. You can also include the source location in a part of the design which will be visible in the end product: https://ohwr.org/project/cernohl/wikis/uploads/8a6b5d01f71c207c49493e4d114d61e6/cern_ohl_p_v2_howto.pdf",
+	-- ["note-cern-ohl-s-2.0"] = "CERN recommends adding the following information in the source files: copyright and license notice, a disclaimer of warranties and a source location. You can also include the source location in a part of the design which will be visible in the end product: https://ohwr.org/project/cernohl/wikis/uploads/cf37727497ca2b5295a7ab83a40fcf5a/cern_ohl_s_v2_user_guide.pdf",
+	-- ["note-cern-ohl-w-2.0"] = "CERN recommends adding the following information in the source files: copyright and license notice, a disclaimer of warranties and a source location. You can also include the source location in a part of the design which will be visible in the end product: https://ohwr.org/project/cernohl/wikis/uploads/c2e5e9d297949b5c2d324a6cbf6adda0/cern_ohl_w_v2_howto.pdf",
+	["note-ecl-2.0"] = "Apereo Foundation рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти внизу этой лицензии.",
+	["note-eupl-1.1"] = "Европейская комиссия рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла: https://joinup.ec.europa.eu/sites/default/files/inline-files/EUPL%201_1%20Guidelines%20EN%20Joinup.pdf#page=17",
+	["note-gfdl-1.3"] = "Free Software Foundation рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти в аддендуме этой лицензии.",
+	["note-gpl-2.0"] = "Free Software Foundation рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти внизу этой лицензии.",
+	["note-gpl-3.0"] = "Free Software Foundation рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти внизу этой лицензии.",
+	["note-lgpl-2.1"] = "Free Software Foundation рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти внизу этой лицензии.",
+	["note-lgpl-3.0"] = "Free Software Foundation рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти внизу этой лицензии.",
+	["note-lpp-1.3c"] = "Пример шаблона и больше информации об использовании лицензии можно найти внизу.",
+	["note-mpl-2.0"] = "Mozilla Foundation рекомендует как дополнительный шаг добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти внизу этой лицензии (секция Exhibit A).",
+	["note-mulanpsl-2.0"] = "Рекомендуется добавить короткий шаблон лицензии на верх каждого файла. Шаблон можно найти внизу этой лицензии.",
+	["note-ofl-1.1"] = "Эта лицензия не обязывает давать доступ к исходникам, но рекомендует это делать. Все производные файлы от файлов под лицензией OFl обязаны оставаться под этой же лицензией.",
+	["note-upl-1.0"] = "Рекомендуется добавить ссылку на информацию о лицензии и авторском праве на верх каождого исходного файла, пример можно найти тут: https://oss.oracle.com/licenses/upl/",
 }

@@ -1,12 +1,11 @@
 package.path = debug.getinfo(1, "S").source:match("^@(.*/)") .. "?.lua;" .. package.path
+local version = "1.2.0"
 local config = require("cfg") -- also defines I18n
 local text_utils = require("text_utils")
 local table_utils = require("table_utils")
 local file_utils = require("file_utils")
-local notes = file_utils.isModuleAvailable("i18n." .. config.locale .. "_notes")
-		and require("i18n." .. config.locale .. "_notes")
-	or require("i18n.en_US_notes")
-local notes_en = require("i18n.en_US_notes")
+local metadata = require("metadata")
+local show_meta = false
 
 local licensesHashMap = { standard = {}, custom = {} }
 
@@ -118,6 +117,11 @@ for i = 1, #arg do
 			end
 			config[argument] = value
 		end
+	elseif arg[i] == "-v" or arg[i] == "--version" then
+		print(version)
+		os.exit()
+	elseif arg[i] == "-i" or arg[i] == "--info" then
+		show_meta = true
 	else
 		config.licensename = arg[i]
 		local arg_lower = config.licensename:lower()
@@ -170,6 +174,47 @@ if not config.licensename then
 	os.exit(1)
 end
 
+if show_meta then
+	local curr_meta = metadata[config.licensename]
+	I18n:print("description-" .. config.licensename)
+	print()
+	I18n:print("usage-header")
+	for k, v in table_utils.spairs(curr_meta["using"]) do
+		I18n:print("metadata-format", { label = k, desc = v })
+	end
+	print()
+	-- permissions
+	I18n:print("permissions-header")
+	for k, _ in table_utils.spairs(curr_meta["permissions"]) do
+		local perm_label = I18n:msg("permissions-" .. k)
+		local perm_desc = I18n:msg("permissions-" .. k .. "-verbose")
+		I18n:print("metadata-format", { label = perm_label, desc = perm_desc })
+	end
+	print()
+	-- conditions
+	I18n:print("conditions-header")
+	for k, _ in table_utils.spairs(curr_meta["conditions"]) do
+		local perm_label = I18n:msg("conditions-" .. k)
+		local perm_desc = I18n:msg("conditions-" .. k .. "-verbose")
+		I18n:print("metadata-format", { label = perm_label, desc = perm_desc })
+	end
+	print()
+	-- limitations
+	I18n:print("limitations-header")
+	for k, _ in table_utils.spairs(curr_meta["limitations"]) do
+		local perm_label = I18n:msg("limitations-" .. k)
+		local perm_desc = I18n:msg("limitations-" .. k .. "-verbose")
+		I18n:print("metadata-format", { label = perm_label, desc = perm_desc })
+	end
+	print()
+	-- print note (if present)
+	local curr_note = I18n:msgEmpty("note-" .. config.licensename)
+	if curr_note and curr_note ~= "" then
+		I18n:print("note-format", { note = curr_note })
+	end
+	os.exit()
+end
+
 -- process license file
 local filepath = (licensesHashMap.custom[config.licensename:lower()] and config.customLicensesDir or config.licensesDir)
 filepath = filepath .. file_utils.slash .. config.licensename .. ".txt"
@@ -209,8 +254,9 @@ end
 outputFile:write(outputText)
 outputFile:close()
 
-if notes_en[config.licensename:lower()] then
-	I18n:print("note-format", { note = notes[config.licensename:lower()] or notes_en[config.licensename:lower()] })
+local note = I18n:msgEmpty("note-" .. config.licensename:lower())
+if note and note ~= "" then
+	I18n:print("note-format", { note = note })
 	print("\n")
 end
 

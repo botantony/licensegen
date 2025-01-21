@@ -32,6 +32,21 @@ function _i18n:msg(key, args)
 	return replaceArgs(output_msg, args or {})
 end
 
+function _i18n:msgEmpty(key, args)
+	local output_msg = l10ns[_i18n.locale][key] or l10ns[en][key]
+	if not output_msg then
+		return ""
+	end
+
+	args = args or {}
+
+	for k, v in pairs(colors) do
+		args[k] = v
+	end
+
+	return replaceArgs(output_msg, args or {})
+end
+
 function _i18n:print(key, args)
 	print(I18n:msg(key, args))
 end
