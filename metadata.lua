@@ -11,6 +11,8 @@ return {
 			["modifications"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "0BSD",
+		["title"] = "BSD Zero Clause License",
 		["using"] = {
 			["PickMeUp"] = "https://github.com/nazar-pc/PickMeUp/blob/master/copying.md",
 			["Toybox"] = "https://github.com/landley/toybox/blob/master/LICENSE",
@@ -34,6 +36,8 @@ return {
 			["private-use"] = true,
 			["patent-use"] = true,
 		},
+		["spdx-id"] = "AFL-3.0",
+		["title"] = "Academic Free License v3.0",
 		["using"] = {},
 	},
 	["agpl-3.0"] = {
@@ -55,6 +59,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "AGPL-3.0",
+		["title"] = "GNU Affero General Public License v3.0",
 		["using"] = {
 			["Grafana"] = "https://github.com/grafana/grafana/blob/main/LICENSE",
 			["Mastodon"] = "https://github.com/mastodon/mastodon/blob/main/LICENSE",
@@ -78,6 +84,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "Apache-2.0",
+		["title"] = "Apache License 2.0",
 		["using"] = {
 			["Kubernetes"] = "https://github.com/kubernetes/kubernetes/blob/master/LICENSE",
 			["PDF.js"] = "https://github.com/mozilla/pdf.js/blob/master/LICENSE",
@@ -101,6 +109,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "Artistic-2.0",
+		["title"] = "Artistic License 2.0",
 		["using"] = {},
 	},
 	["blueoak-1.0.0"] = {
@@ -118,6 +128,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "BlueOak-1.0.0",
+		["title"] = "Blue Oak Model License 1.0.0",
 		["using"] = {
 			["drone-gc"] = "https://github.com/drone/drone-gc/blob/master/LICENSE.md",
 			["oh-my-git"] = "https://github.com/git-learning-game/oh-my-git/blob/main/LICENSE.md",
@@ -138,6 +150,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "BSD-2-Clause",
+		["title"] = 'BSD 2-Clause "Simplified" License',
 		["using"] = {
 			["Homebrew"] = "https://github.com/Homebrew/brew/blob/master/LICENSE.txt",
 			["Pony"] = "https://github.com/ponylang/ponyc/blob/master/LICENSE",
@@ -159,6 +173,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "BSD-2-Clause-Patent",
+		["title"] = "BSD-2-Clause Plus Patent License",
 		["using"] = {
 			["Manubot"] = "https://github.com/manubot/manubot/blob/main/LICENSE.md",
 			["Preprint Similarity Search"] = "https://github.com/greenelab/preprint-similarity-search/blob/master/LICENSE.md",
@@ -179,6 +195,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "BSD-3-Clause",
+		["title"] = 'BSD 3-Clause "New" or "Revised" License',
 		["using"] = {
 			["Flutter"] = "https://github.com/flutter/flutter/blob/master/LICENSE",
 			["LevelDB"] = "https://github.com/google/leveldb/blob/master/LICENSE",
@@ -200,6 +218,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "BSD-3-Clause-Clear",
+		["title"] = "BSD 3-Clause Clear License",
 		["using"] = {},
 	},
 	["bsd-4-clause"] = {
@@ -216,6 +236,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "BSD-4-Clause",
+		["title"] = 'BSD 4-Clause "Original" or "Old" License',
 		["using"] = {
 			["Choco-solver"] = "https://github.com/chocoteam/choco-solver/blob/master/LICENSE",
 			["PMSPAUR-public"] = "https://github.com/ArthurGodet/PMSPAUR-public/blob/master/LICENSE",
@@ -236,6 +258,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "BSL-1.0",
+		["title"] = "Boost Software License 1.0",
 		["using"] = {
 			["Boost"] = "https://github.com/boostorg/boost/blob/master/LICENSE_1_0.txt",
 			["Catch2"] = "https://github.com/catchorg/Catch2/blob/devel/LICENSE.txt",
@@ -259,6 +283,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "CC-BY-4.0",
+		["title"] = "Creative Commons Attribution 4.0 International",
 		["using"] = {
 			["FiveThirtyEight data"] = "https://github.com/fivethirtyeight/data/blob/master/LICENSE",
 			["Kubernetes documentation"] = "https://github.com/kubernetes/website/blob/master/LICENSE",
@@ -283,6 +309,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "CC-BY-SA-4.0",
+		["title"] = "Creative Commons Attribution Share Alike 4.0 International",
 		["using"] = {
 			["Flight rules for Git"] = "https://github.com/k88hudson/git-flight-rules/blob/master/LICENSE",
 			["Material Design Iconic Font"] = "https://github.com/zavoloklom/material-design-iconic-font/blob/master/License.md",
@@ -303,6 +331,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "CC0-1.0",
+		["title"] = "Creative Commons Zero v1.0 Universal",
 		["using"] = {
 			["Awesome"] = "https://github.com/sindresorhus/awesome/blob/main/license",
 			["Shields.io"] = "https://github.com/badges/shields/blob/master/LICENSE",
@@ -327,6 +357,8 @@ return {
 			["private-use"] = true,
 			["patent-use"] = true,
 		},
+		["spdx-id"] = "CECILL-2.1",
+		["title"] = "CeCILL Free Software License Agreement v2.1",
 		["using"] = {
 			["BMC-Tools"] = "https://github.com/ANSSI-FR/bmc-tools/blob/master/LICENCE.txt",
 			["Taxe fonciere"] = "https://github.com/etalab/taxe-fonciere/blob/master/LICENSE",
@@ -349,6 +381,8 @@ return {
 			["private-use"] = true,
 			["patent-use"] = true,
 		},
+		["spdx-id"] = "CERN-OHL-P-2.0",
+		["title"] = "CERN Open Hardware Licence Version 2 - Permissive",
 		["using"] = {
 			["LEDEAF"] = "https://github.com/adamgreig/ledeaf/blob/master/LICENSE_CERN_OHL_P_v2.txt",
 			["Open source controller board for ventilators"] = "https://github.com/CV19CO/open_controller_for_ventilator/blob/master/LICENSE",
@@ -373,6 +407,8 @@ return {
 			["private-use"] = true,
 			["patent-use"] = true,
 		},
+		["spdx-id"] = "CERN-OHL-S-2.0",
+		["title"] = "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
 		["using"] = {
 			["Passport Electronics"] = "https://github.com/Foundation-Devices/passport-electronics/blob/master/LICENSE.txt",
 			["USB Armory"] = "https://github.com/f-secure-foundry/usbarmory/blob/master/hardware/mark-two/LICENSE",
@@ -397,6 +433,8 @@ return {
 			["private-use"] = true,
 			["patent-use"] = true,
 		},
+		["spdx-id"] = "CERN-OHL-W-2.0",
+		["title"] = "CERN Open Hardware Licence Version 2 - Weakly Reciprocal",
 		["using"] = {
 			["FPGA Cores"] = "https://github.com/suoto/fpga_cores/blob/master/LICENSE",
 			["GProcessor8Bits"] = "https://github.com/JonathSpirit/GP8B/blob/master/LICENSE",
@@ -420,6 +458,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "ECL-2.0",
+		["title"] = "Educational Community License v2.0",
 		["using"] = {
 			["OAE"] = "https://github.com/oaeproject/Hilary/blob/master/LICENSE",
 			["Opencast"] = "https://github.com/opencast/opencast/blob/develop/LICENSE",
@@ -443,6 +483,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "EPL-1.0",
+		["title"] = "Eclipse Public License 1.0",
 		["using"] = {
 			["ClojureScript"] = "https://github.com/clojure/clojurescript/blob/master/LICENSE",
 			["JUnit"] = "https://github.com/junit-team/junit4/blob/main/LICENSE-junit.txt",
@@ -466,6 +508,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "EPL-2.0",
+		["title"] = "Eclipse Public License 2.0",
 		["using"] = {
 			["SUMO"] = "https://github.com/eclipse-sumo/sumo/blob/main/LICENSE",
 			["hawkBit"] = "https://github.com/eclipse/hawkbit/blob/master/LICENSE",
@@ -492,6 +536,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "EUPL-1.1",
+		["title"] = "European Union Public License 1.1",
 		["using"] = {},
 	},
 	["eupl-1.2"] = {
@@ -514,6 +560,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "EUPL-1.2",
+		["title"] = "European Union Public License 1.2",
 		["using"] = {
 			["HeroRotation"] = "https://github.com/herotc/hero-rotation/blob/shadowlands/LICENSE",
 			["WildDuck"] = "https://github.com/nodemailer/wildduck/blob/master/LICENSE",
@@ -537,6 +585,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "GFDL-1.3",
+		["title"] = "GNU Free Documentation License v1.3",
 		["using"] = {
 			["GNU LilyPond (Documentation)"] = "https://git.savannah.gnu.org/cgit/lilypond.git/tree/COPYING.FDL",
 			["GNU Scientific Library (Documentation)"] = "https://git.savannah.gnu.org/cgit/gsl.git/tree/doc/_static/fdl.txt",
@@ -560,6 +610,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "GPL-2.0",
+		["title"] = "GNU General Public License v2.0",
 		["using"] = {
 			["AliSQL"] = "https://github.com/alibaba/AliSQL/blob/master/COPYING",
 			["Discourse"] = "https://github.com/discourse/discourse/blob/master/LICENSE.txt",
@@ -584,6 +636,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "GPL-3.0",
+		["title"] = "GNU General Public License v3.0",
 		["using"] = {
 			["Ansible"] = "https://github.com/ansible/ansible/blob/devel/COPYING",
 			["Bash"] = "https://git.savannah.gnu.org/cgit/bash.git/tree/COPYING",
@@ -604,6 +658,8 @@ return {
 			["modifications"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "ISC",
+		["title"] = "ISC License",
 		["using"] = {
 			["Node.js semver"] = "https://github.com/npm/node-semver/blob/master/LICENSE",
 			["OpenStreetMap iD"] = "https://github.com/openstreetmap/iD/blob/develop/LICENSE.md",
@@ -627,6 +683,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "LGPL-2.1",
+		["title"] = "GNU Lesser General Public License v2.1",
 		["using"] = {},
 	},
 	["lgpl-3.0"] = {
@@ -647,6 +705,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "LGPL-3.0",
+		["title"] = "GNU Lesser General Public License v3.0",
 		["using"] = {},
 	},
 	["lppl-1.3c"] = {
@@ -665,6 +725,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "LPPL-1.3c",
+		["title"] = "LaTeX Project Public License v1.3c",
 		["using"] = {},
 	},
 	["mit"] = {
@@ -681,6 +743,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "MIT",
+		["title"] = "MIT License",
 		["using"] = {
 			["Babel"] = "https://github.com/babel/babel/blob/master/LICENSE",
 			["Rails"] = "https://github.com/rails/rails/blob/master/MIT-LICENSE",
@@ -699,6 +763,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "MIT-0",
+		["title"] = "MIT No Attribution",
 		["using"] = {
 			["Reactive Streams"] = "https://github.com/reactive-streams/reactive-streams-jvm/blob/master/LICENSE",
 			["SOIL2"] = "https://github.com/SpartanJ/SOIL2/blob/master/LICENSE",
@@ -723,6 +789,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "MPL-2.0",
+		["title"] = "Mozilla Public License 2.0",
 		["using"] = {
 			["Servo"] = "https://github.com/servo/servo/blob/master/LICENSE",
 			["Syncthing"] = "https://github.com/syncthing/syncthing/blob/main/LICENSE",
@@ -744,6 +812,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "MS-PL",
+		["title"] = "Microsoft Public License",
 		["using"] = {},
 	},
 	["ms-rl"] = {
@@ -763,6 +833,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "MS-RL",
+		["title"] = "Microsoft Reciprocal License",
 		["using"] = {},
 	},
 	["mulanpsl-2.0"] = {
@@ -781,6 +853,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "MulanPSL-2.0",
+		["title"] = "Mulan Permissive Software License, Version 2",
 		["using"] = {
 			["Android CN OAID"] = "https://github.com/gzu-liyujiang/Android_CN_OAID/blob/master/LICENSE",
 			["lute"] = "https://github.com/88250/lute/blob/master/LICENSE",
@@ -801,6 +875,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "NCSA",
+		["title"] = "University of Illinois/NCSA Open Source License",
 		["using"] = {
 			["RLTK"] = "https://github.com/chriswailes/RLTK/blob/master/LICENSE",
 			["ROCR-Runtime"] = "https://github.com/RadeonOpenCompute/ROCR-Runtime/blob/master/LICENSE.txt",
@@ -825,6 +901,8 @@ return {
 			["modifications"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "ODbL-1.0",
+		["title"] = "Open Data Commons Open Database License v1.0",
 		["using"] = {
 			["OpenFlights"] = "https://github.com/jpatokal/openflights/blob/master/data/LICENSE",
 			["Public Zone Database"] = "https://github.com/zonedb/zonedb/blob/main/LICENSE-DATA.md",
@@ -846,6 +924,8 @@ return {
 			["modifications"] = true,
 			["distribution"] = true,
 		},
+		["spdx-id"] = "OFL-1.1",
+		["title"] = "SIL Open Font License 1.1",
 		["using"] = {
 			["Fantasque Sans Mono"] = "https://github.com/belluzj/fantasque-sans/blob/master/LICENSE.txt",
 			["FiraCode"] = "https://github.com/tonsky/FiraCode/blob/master/LICENSE",
@@ -872,6 +952,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "OSL-3.0",
+		["title"] = "Open Software License 3.0",
 		["using"] = {
 			["appserver.io"] = "https://github.com/appserver-io/appserver/blob/master/LICENSE.txt",
 			["JsonMapper"] = "https://github.com/cweiske/jsonmapper/blob/master/LICENSE",
@@ -892,6 +974,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "PostgreSQL",
+		["title"] = "PostgreSQL License",
 		["using"] = {
 			[".NET Access to PostgreSQL"] = "https://github.com/npgsql/npgsql/blob/main/LICENSE",
 			["pgAdmin"] = "https://github.com/postgres/pgadmin4/blob/master/LICENSE",
@@ -910,6 +994,8 @@ return {
 			["modifications"] = true,
 			["distribution"] = true,
 		},
+		["spdx-id"] = "Unlicense",
+		["title"] = "The Unlicense",
 		["using"] = {
 			["RDF.rb"] = "https://github.com/ruby-rdf/rdf/blob/master/UNLICENSE",
 			["kakoune"] = "https://github.com/mawww/kakoune/blob/master/UNLICENSE",
@@ -931,6 +1017,8 @@ return {
 			["patent-use"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "UPL-1.0",
+		["title"] = "Universal Permissive License v1.0",
 		["using"] = {
 			["Roc"] = "https://github.com/roc-lang/roc/blob/main/LICENSE",
 			["Souffle"] = "https://github.com/souffle-lang/souffle/blob/master/LICENSE",
@@ -951,6 +1039,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "Vim",
+		["title"] = "Vim License",
 		["using"] = {
 			["Pathogen"] = "https://github.com/tpope/vim-pathogen/blob/master/LICENSE",
 			["Vim"] = "https://github.com/vim/vim/blob/master/LICENSE",
@@ -966,6 +1056,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "WTFPL",
+		["title"] = "Do What The F*ck You Want To Public License",
 		["using"] = {},
 	},
 	["zlib"] = {
@@ -983,6 +1075,8 @@ return {
 			["distribution"] = true,
 			["private-use"] = true,
 		},
+		["spdx-id"] = "Zlib",
+		["title"] = "zlib License",
 		["using"] = {
 			["GLFW"] = "https://github.com/glfw/glfw/blob/master/LICENSE.md",
 			["Portainer"] = "https://github.com/portainer/portainer/blob/develop/LICENSE",

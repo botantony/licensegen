@@ -176,6 +176,8 @@ end
 
 if show_meta then
 	local curr_meta = metadata[config.licensename]
+	print(curr_meta["title"])
+	print("SPDX-ID: " .. curr_meta["spdx-id"] .. "\n")
 	I18n:print("description-" .. config.licensename)
 	print()
 	I18n:print("usage-header")
