@@ -45,7 +45,7 @@ There are some specific arguments that may be set automatically:
 - year - Current year
 
 ## Config
-If a user creates `~/.config/licensegen/` directory (for Unix) or `%LOCALAPPDATA\licensegen\` folder, `config.lua` from can be used to set default default values. For example:
+If a user creates `~/.config/licensegen/` directory (for Unix) or `%LOCALAPPDATA%\licensegen\` folder, `config.lua` from can be used to set default default values. For example:
 ```lua
 return {
     owner = "My Name",
