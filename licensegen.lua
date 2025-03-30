@@ -6,6 +6,7 @@ local table_utils = require("table_utils")
 local file_utils = require("file_utils")
 local metadata = require("metadata")
 local show_meta = false
+local print_stdout = false
 
 local licensesHashMap = { standard = {}, custom = {} }
 
@@ -103,6 +104,8 @@ for i = 1, #arg do
             print("	" .. k .. " -> " .. v)
         end
         os.exit()
+    elseif arg[i] == "--cat" or arg[i] == "--print" then
+        print_stdout = true
     elseif arg[i]:match("^%-%-%a+%=.+") then
         local argument, value = arg[i]:match("^%-%-(%a+)%=(.+)")
         if not configConstants[argument] and argument ~= "licensename" then
@@ -237,12 +240,17 @@ for k, v in pairs(config) do
     end
 end
 
-outputText = text_utils.replaceArgs(outputText, replace)
+outputText = text_utils.replaceArgs(outputText, replace):gsub("^%s*(.-)%s*$", "%1")
 
 if outputText:match("%$[^%s]+%$") then
     for argument in string.gmatch(outputText, "%$[^%s]+%$") do
         I18n:printErrOrWarning(true, I18n:msg("warning-unfilled-argument", { arg = argument }))
     end
+end
+
+if print_stdout then
+    print(outputText)
+    os.exit()
 end
 
 filepath = config.workdir .. file_utils.slash .. config.filename

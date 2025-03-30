@@ -1,9 +1,9 @@
 rockspec_format = "3.0"
 package = "licensegen"
-version = "v1.2.1-1"
+version = "v1.2.2-1"
 source = {
 	url = "git+https://github.com/botantony/licensegen.git",
-	tag = "v1.2.1",
+	tag = "v1.2.2",
 }
 description = {
 	summary = "Tool for generating license files",

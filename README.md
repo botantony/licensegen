@@ -29,6 +29,7 @@ There are also some options that do not create license file but output useful in
 - `-h` or `--help` - Show help page
 - `-v` or `--version` - Show version
 - `-a` or `--aliases` - Show aliases
+- `--cat` or `--print` - output license to stdout (do not create license file)
 - `-i` or `--info` - Show detailed info about the license
 - `--list` or `--licenses` - List all licenses
 - `--cfg` or `--config` - Show config directory
